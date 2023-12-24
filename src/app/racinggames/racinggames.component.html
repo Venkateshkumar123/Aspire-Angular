@@ -1,0 +1,84 @@
+
+<div class="wholepage">
+
+  <div class="heading">
+    <h1>Racing Games</h1>
+  </div>
+
+  <!-- <div class="container" style="color:whitesmoke;">
+    <table class="table"style="color:whitesmoke;">
+      <thead style="text-align: center;">
+        <tr>
+          <th >Game Name</th>
+          <th >Genere</th>
+          <th >Description</th>
+          <th >Requirements</th>
+          <th >img</th>
+          <th>Price</th>
+          <th >Buy</th>
+        </tr>
+      </thead>
+      <tbody style="font-size: large; font-weight: bold; font-variant: small-caps; line-height: 40px;">
+        <tr *ngFor="let item of racing ">
+          <td style="color: green; font-weight: bold;">{{item.gamename}}</td>
+          <td>{{item.genere}}</td>
+          <td >{{item.description}}</td>
+          <td>{{item.requirements}}
+            <ul>
+              <li>CPU: Intel Core i3-4370 / AMD FX-6350.</li>
+              <li>RAM: 8 GB.</li>
+              <li>VIDEO CARD: NVIDIA GeForce GTX 650 / AMD Radeon HD 6850.</li>
+              <li>DEDICATED VIDEO RAM: 1024 MB.</li>
+              <li>OS: Windows 10 64-Bit</li>
+            </ul>
+          </td>
+          <td><img [src]="item.img" alt="" width="300px" height="200px"> </td>
+          <td style="padding-left: 50px; padding-top: 150px; color: green;">{{item.price}}</td>
+          <td style="padding: 100px;"><a routerLink=""><button>Buy</button></a> </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+  </div> -->
+
+  <!-- Bootstrap Design -->
+
+
+  <div style="background: transparent; border: none;"     class="card mb-3" *ngFor="let item of racing">
+    <img class="card-img-top" [src]="item.img" alt="Card image cap" style="width:500px;margin-left: 39%;">
+    <div class="card-body">
+      <h5 class="card-title" style="color:yellow; margin-top:5%; margin-left: 30px; " >{{item.gamename}}:</h5>
+      <p class="card-text"  style="color:white; margin-top:1%; margin-left: 30px;">{{item.description}}</p>
+      <p class="card-text">
+        <small class="text-muted">
+          <h4 style="margin-top: 3%;margin-left:2%; color: yellow;">Requirements:</h4>
+          <ul style="list-style-type: none; margin-left: 100px; color: whitesmoke;">
+            ,<li>Operating System: Windows 10</li>
+            <li>CPU: Intel Core i7-4790 / AMD Ryzen 5 1600</li>
+            <li>GPU: NVIDIA GeForce GTX 1650 (4 GB) / AMD Radeon RX 570 (4 GB)</li>
+            <li>RAM: 16 GB</li>
+            <li>Storage: 90 GB</li>
+            <li>DirectX: DirectX 12</li>
+          </ul>
+        </small></p>
+        <p class="card-text"  >
+          <small class="text-muted"><h4 style="color:Yellow; margin-top:1%; margin-left: 30px;">Game Genere:</h4></small>
+        </p>
+        <p class="card-text"  style="color:white; margin-top:1%; margin-left: 100px;">{{item.genere}}</p>
+        <p class="card-text"  >
+          <small class="text-muted"><h4 style="color:Yellow; margin-top:1%; margin-left: 30px;">Price:</h4></small>
+        </p>
+        <p class="card-text"  style="color:white; margin-top:1%; margin-left: 100px;">
+          <a class="btn btn-outline-light btn-lg" href="#!" role="button" style="padding: 2px 20px;">{{item.price}}</a>
+        </p>
+        <p class="card-text"  >
+          <small class="text-muted"><h4 style="color:Yellow; margin-top:1%; margin-left: 30px;">Purchase:</h4></small>
+        </p>
+        <p class="card-text"  style="color:white; margin-top:1%; margin-left: 100px;">
+          <button  routerLink="/paymentpage"  type="button" class="btn btn-success btn-sm" style="padding: 2px 20px; font-weight: bold; box-shadow: 2px 4px 2px 4px black;">Buy</button>
+        </p>
+    </div>
+  </div>
+

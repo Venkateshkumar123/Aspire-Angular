@@ -1,0 +1,101 @@
+<nav class="navbar bg-dark">
+
+  <div class="container">
+    <h2>Admin Page</h2>
+  </div>
+
+  <div class="d-flex">
+    <button class="btn btn-success"data-bs-toggle="modal"data-bs-target="#exampleModal">Add Products</button>
+  </div>
+
+</nav>
+
+
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div style="background-color: yellowgreen"class="modal-header">
+        <h5 style="color:white;"class="modal-title" id="exampleModalLabel">ADD PRODUCTS DATA</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Form Started  -->
+        <form [formGroup]="productform">
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">Enter Game Name</label>
+            <input type="text" class="form-control" formControlName="name"  placeholder="Enter Game name">
+
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">Game Iamge</label>
+            <input type="text" class="form-control" formControlName="image"  placeholder="Image Link">
+
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">Enter Discription</label>
+            <input type="text" class="form-control" formControlName="discription" placeholder="Game Discription">
+
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">Enter Genere</label>
+            <input type="text" class="form-control" formControlName="genere"  placeholder="Enter Genre">
+
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="exampleInputEmail1">Enter Price</label>
+            <input type="number" class="form-control" formControlName="price" placeholder="Enter Price">
+
+          </div>
+
+        </form>
+
+      </div>
+      <div style="background-color: yellowgreen"class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        <button (click)="addproducts(this.productform.value)" type="button" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN TABLE -->
+<div class="container-fluid mt-3">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Enter Game Name</th>
+        <th scope="col">Game Image</th>
+        <th scope="col">Game Discription</th>
+        <th scope="col">Genere</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+
+        <td>{{item.name}}</td>
+        <td>{{item.image}}</td>
+        <td>{{item.discription}}</td>
+        <td>{{item.genere}}</td>
+        <td>{{item.price |currency:'INR'}}</td>
+        <td><button routerLink="/update/{{item.name}}" class="btn btn-warning">Edit</button>&nbsp;
+            <button class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>

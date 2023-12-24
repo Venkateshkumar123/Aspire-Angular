@@ -1,0 +1,705 @@
+<app-navbar></app-navbar>
+<div class="d-flex flex-row-reverse">
+
+  <!-- <a href="" routerLink="/addtocart">
+  <button class="btn btn-light"  style="margin-right: 50px;padding:10px 10px;margin-top:-1%;">
+   <i style="font-size:30px;"  class="fa fa-cart-plus"></i>
+    <div style="font-size: 10px;" class="badge bg-dark">{{totalitem}}</div>
+  </button></a> -->
+
+  <a
+  routerLink="/addtocart"
+  href="#"
+  class="btn btn-primary"
+  style="width:fit-content; padding: 5px 10px; font-weight: bold;margin-right:550px;"
+  ><i style="font-size:30px;"  class="fa fa-cart-plus"></i>{{totalitem}}</a
+>
+
+</div>
+
+
+
+
+
+
+
+<body>
+  <div class="wholepage">
+    <div class="dashboard-container">
+      <h1>Welcome To Spirited Store</h1>
+      <div class="userprofilecontainer">
+        <div class="userprofile">
+          <p class="text-bold" [innerText]="'Hi ' + this.user.displayName"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="updatedtitle">
+      <h1>Updated Games</h1>
+    </div>
+
+    <!-- Images Sliding -->
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner" style="margin-top: 4%">
+        <div class="carousel-item active" data-interval="5000">
+          <img
+            style="width: 400px; margin-left: 37%"
+            [src]="dsimages[0]"
+            class="d-block"
+            alt="GTAV"
+          />
+        </div>
+        <div class="carousel-item" data-interval="5000">
+          <img
+            style="width: 400px; margin-left: 39%"
+            [src]="dsimages[1]"
+            class="d-block"
+            alt="GTAV"
+          />
+        </div>
+        <div class="carousel-item" data-interval="5000">
+          <img
+            style="width: 400px; margin-left: 39%"
+            [src]="dsimages[2]"
+            class="d-block"
+            alt="GTAV"
+          />
+        </div>
+        <div class="carousel-item" data-interval="5000">
+          <img
+            style="width: 400px; margin-left: 39%"
+            [src]="dsimages[3]"
+            class="d-block"
+            alt="GTAV"
+          />
+        </div>
+        <div class="carousel-item" data-interval="5000">
+          <img
+            style="width: 400px; margin-left: 39%"
+            [src]="dsimages[4]"
+            class="d-block"
+            alt="GTAV"
+          />
+        </div>
+        <div class="carousel-item" data-interval="5000">
+          <img
+            style="width: 400px; margin-left: 39%"
+            [src]="dsimages[5]"
+            class="d-block"
+            alt="GTAV"
+          />
+        </div>
+      </div>
+      <!-- Interval block -->
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleInterval"
+        role="button"
+        data-slide="prev"
+      >
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleInterval"
+        role="button"
+        data-slide="next"
+      >
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- Interval And Button -->
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleInterval"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleInterval"
+      role="button"
+      data-slide="next"
+    >
+      <span class="" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="all-categories">
+    <div class="trending-games">
+      <!-- <h1>Gamerz Life</h1> -->
+      <div class="h1">
+        <h1>
+          <button
+            type="button"
+            class="btn btn-light btn-lg"
+            style="
+              padding: 5px 10px;
+              color: black;
+              font-weight: bolder;
+              border: 1px solid black;
+            "
+          >
+            <i class="fa-solid fa-shield-halved"></i>&nbsp;Gamerz Life
+          </button>
+        </h1>
+      </div>
+      <div class="gamerz-content">
+        <p
+          class="btn btn-outline-light btn-lg"
+          style="padding: 5px 20px; margin-top: 3%"
+        >
+          <span style="color: red; font-weight: bolder; font-size: larger"
+            >Benefits of video games for both children and adults include:
+          </span>
+          Healthy brain stimulation. Development of problem-solving skills.
+          Stress relief.
+        </p>
+      </div>
+
+      <!-- Categories Dropdown box -->
+
+      <div class="categorylist">
+        <!-- <button class="dropbtn">Categories</button> -->
+        <a
+          href="#"
+          class="btn btn-primary btn-lg active"
+          role="button"
+          aria-pressed="true"
+          style="padding: 5px 20px"
+          >Categories</a
+        >
+        <div class="dropdown-content">
+          <a routerLink="/actiongames">Action-games</a>
+          <a routerLink="/openworldgames">Open-World</a>
+          <a routerLink="/horrorgames">Horror</a>
+          <a routerLink="/simulationgames">Simulation</a>
+          <a routerLink="/racinggames">Racing</a>
+        </div>
+      </div>
+    </div>
+
+    <!--Categories -->
+
+
+    <!-- Set One -->
+    <div class="categories">
+      <div class="action-games-categories">
+        <div class="action-games">
+          <h1 style="font-family: 'Poppins', sans-serif">Trending Games</h1>
+
+          <div class="d-flex flex-row" style="margin-left:2%;" >
+
+            <ul *ngFor="let item of dashboard" >
+              <li>
+                <!--  Crime Boss Trailer Button -->
+                <div class="trailer">
+                  <a href={{item.link}}
+                    ><button>
+                      <i class="fa-brands fa-youtube"></i> Watch trailer
+                    </button></a
+                  >
+                </div>
+
+                <!-- Price Amount -->
+
+                <a
+                  class="btn btn-outline-light btn-lg"
+                  href="#!"
+                  role="button"
+                  style="padding: 2px 10px"
+                  >{{ item.name }}</a
+                >
+
+                <!-- <a routerLink="#"><img [src]="dsimages[0]" width="150px" height="190px"></a> -->
+
+                <div class="card" style="width: 15rem;margin-top: 8%;">
+                  <img [src]="item.img" class="card-img-top" alt="..." />
+                </div>
+                <a
+                  routerLink={{item.details}}
+                  href="#"
+                  class="btn btn-primary"
+                  style="width: 30%; padding: 5px 10px; font-weight: bold;margin-right:70px; margin-top: 8%;"
+                  >{{item.button}}</a
+                >&nbsp; &nbsp; <a
+                href="#"
+                class="btn btn-success"
+                style="width:30%; padding: 5px 6px; font-weight: bold; margin-right: 15px;margin-top: 8%"
+                >{{item.price}}</a
+              >
+              <!-- Add To Cart Button -->
+              <button type="button" class="btn-sm" style="margin-top:7%;padding:10px 40px;background:orangered;border-radius: 10px;color:whitesmoke;font-weight: bolder;"(click)="addtocart(item)" ><i class="fa-solid fa-cart-shopping" style="color: yellow;font-size: larger;"></i>&nbsp;&nbsp;Add To Cart</button>
+              </li>
+
+
+            </ul>
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- SEt TWO-Products -->
+
+      <div class="action-games-categories">
+        <h1 style="color: yellow">Games Collections</h1>
+
+        <!-- Products 1 -->
+
+        <!-- GTAV -->
+
+        <div class="action-games">
+          <!-- <h1>Simulation Games</h1> -->
+
+
+          <!-- BootStrap -Flex -->
+
+
+
+          <div class="d-flex flex-row"  style="margin-left: 2%;">
+
+
+            <ul *ngFor="let item of set2">
+              <li>
+                <!-- Trailer Button -->
+                <div class="trailer">
+                  <a href={{item.link}}
+                    ><button>
+                      <i class="fa-brands fa-youtube"></i> Watch trailer
+                    </button></a
+                  >
+                </div>
+
+                <!-- Price Amount -->
+                <a
+                  class="btn btn-outline-light btn-lg"
+                  href="#!"
+                  role="button"
+                  style="padding: 2px 10px"
+                  >{{ item.name }}</a
+                >
+                <div class="card" style="width: 15rem;margin-top: 8%;">
+                  <img [src]="item.img" class="card-img-top" alt="..." />
+                </div>
+                <a
+                  routerLink={{item.details}}
+                  href="#"
+                  class="btn btn-primary"
+                  style="width: 30%; padding: 5px 10px; font-weight: bold;margin-right:70px; margin-top: 8%;"
+                  >{{item.button}}</a
+                >&nbsp; &nbsp; <a
+                href="#"
+                class="btn btn-success"
+                style="width:30%; padding: 5px 6px; font-weight: bold; margin-right: 15px; margin-top: 8%;"
+                >{{item.price}}</a
+              >
+
+              <!-- Add To Cart Button -->
+              <button type="button" class="btn-sm" style="margin-top:7%;padding:10px 40px;background:orangered;border-radius: 10px;color:whitesmoke;font-weight: bolder;"(click)="addtocart(item)" ><i class="fa-solid fa-cart-shopping" style="color: yellow;font-size: larger;"></i>&nbsp;&nbsp;Add To Cart</button>
+              </li>
+
+
+            </ul>
+
+
+
+
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+      <!-- SET THREE-Product-1 -->
+
+      <!-- Adventure Games -->
+
+      <div class="action-games-categories">
+        <div class="action-games">
+          <!-- <h1>Action-Adventure Games</h1> -->
+
+
+
+          <div class="d-flex flex-row"  style="margin-left: 2%;">
+
+            <ul *ngFor="let item of set3">
+              <!-- Construction Simulator -->
+              <li>
+                <!-- Trailer Button -->
+                <div class="trailer">
+                  <a href={{item.link}}
+                    ><button>
+                      <i class="fa-brands fa-youtube"></i> Watch trailer
+                    </button></a
+                  >
+                </div>
+
+                <!-- Price Amount -->
+                <a
+                  class="btn btn-outline-light btn-lg"
+                  href="#!"
+                  role="button"
+                  style="padding: 2px 10px"
+                  >{{item.name}}</a
+                >
+
+                <div class="card" style="width: 15rem;margin-top: 8%;">
+                  <img [src]="item.img" class="card-img-top" alt="..." />
+                </div>
+
+                <a
+                routerLink={{item.details}}
+                href="#"
+                class="btn btn-primary"
+                style="width: 30%; padding: 5px 10px; font-weight: bold;margin-right:70px;margin-top: 8%;"
+                >{{item.button}}</a
+              >&nbsp; &nbsp; <a
+              href="#"
+              class="btn btn-success"
+              style="width:30%; padding: 5px 6px; font-weight: bold; margin-right: 12px;margin-top: 8%;"
+              >{{item.price}}</a
+            >
+                <!-- Add to cart Button -->
+                <button type="button" class="btn-sm" style="margin-top:7%;padding:10px 40px;background:orangered;border-radius: 10px;color:whitesmoke;font-weight: bolder;"(click)="addtocart(item)" ><i class="fa-solid fa-cart-shopping" style="color: yellow;font-size: larger;"></i>&nbsp;&nbsp;Add To Cart</button>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- SET FOUR Products-1 -->
+      <!-- Categories3 -->
+
+      <div class="action-games-categories">
+        <div class="action-games">
+          <!-- <h1>Categories3 Games</h1> -->
+
+
+        <!--Flex-BootStrap  -->
+
+          <div class="d-flex flex-row"  style="margin-left: 2%;">
+            <ul *ngFor="let item of set4">
+              <!-- Plague Tale -->
+              <li>
+                <!-- Trailer Button -->
+                <div class="trailer">
+                  <a href={{item.link}}
+                    ><button>
+                      <i class="fa-brands fa-youtube"></i> Watch trailer
+                    </button></a
+                  >
+                </div>
+
+                <!-- Price Amount -->
+                <a
+                  class="btn btn-outline-light btn-lg"
+                  href="#!"
+                  role="button"
+                  style="padding: 2px 10px"
+                  >{{item.name}}</a
+                >
+
+                <div class="card" style="width: 15rem;margin-top: 8%;">
+                  <img [src]="item.img" class="card-img-top" alt="..." />
+                </div>
+
+                <a
+                  routerLink={{item.details}}
+                  href="#"
+                  class="btn btn-primary"
+                  style="width: 30%; padding: 5px 10px; font-weight: bold;margin-right:70px;margin-top: 8%;"
+                  >{{item.button}}</a
+                >&nbsp; &nbsp; <a
+                href="#"
+                class="btn btn-success"
+                style="width:30%; padding: 5px 6px; font-weight: bold; margin-right: 12px;margin-top: 8%;"
+                >{{item.price}}</a
+              >
+              <!-- Add To cart Button -->
+              <button type="button" class="btn-sm" style="margin-top:7%;padding:10px 40px;background:orangered;border-radius: 10px;color:whitesmoke;font-weight: bolder;"(click)="addtocart(item)" ><i class="fa-solid fa-cart-shopping" style="color: yellow;font-size: larger;"></i>&nbsp;&nbsp;Add To Cart</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <!-- <div class="footer" style="border: 2px solid transparent; margin-top: 5%;background:transparent;">
+    <div class="border-box">
+      <footer>
+        <div class="footer-list">
+          <h3>Connect with us</h3>
+          <ul>
+            <li>
+              <a routerLink=""
+                ><i class="fa-brands fa-instagram"></i> Instagram</a
+              >
+            </li>
+            <li>
+              <a routerLink=""
+                ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+              >
+            </li>
+          </ul>
+          <div class="services">
+            <h3>Services</h3>
+            <ul>
+              <li>
+                <a routerLink="/login"
+                  ><i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                  Login</a
+                >
+              </li>
+              <li>
+                <a routerLink="/register"
+                  ><i class="fa-solid fa-registered"></i> Register</a
+                >
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="mail">
+          <h5>Author-Spirited:</h5>
+          <form>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              id=""
+              placeholder="spirited@gmail.com"
+              required
+            />
+          </form>
+          <div class="sendbtn">
+            <button>Send</button>
+          </div>
+        </div>
+        <div class="needhelps" >
+          <h3>Need Helps</h3>
+          <ul>
+            <li><a routerLink="/footer">Privacy Policy</a></li>
+            <li><a routerLink="/about">About us</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body> -->
+
+
+<!-- BootStrap -->
+
+<div class="container my-5" style="margin-left: 15%; margin-top:3%;">
+
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color:transparent"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4"
+             style="background-color:transparent"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="https://www.instagram.com/ungal_tamil_gamer/" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/venkatesh-kumar-b-496624222" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/account" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold" style="color:yellow">Company name</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color:red; height: 2px"
+                />
+            <p>
+              Spirited is a digital platform created by Valve Corporation to serve as a distributor of PC games. The Spirited client allows users to install PC games online directly to their cloud drives after purchase. Spirited users are welcome to post their reviews, upload self-made content, buy DLCs, and much more!
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold"  style="color:yellow">Services</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: red; height: 2px"
+                />
+            <p>
+              <a routerLink="/register" class="text-white" style="text-decoration: none;"><i class="fa-solid fa-address-card" ></i>&nbsp; &nbsp; Register</a>
+            </p>
+            <p>
+              <a routerLink="/login" class="text-white"  style="text-decoration: none;"><i class="fa-solid fa-right-to-bracket"></i>&nbsp; &nbsp; Login</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold"  style="color:yellow">Details</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <div>
+              <h6 title="Account Details" class="text-white">Your Account</h6>
+          </div>
+
+            <div>
+              <h6  class="text-white" style="margin-top:3%;">Shipping Rates:</h6>
+              The shipping address is the physical address needed to deliver the parcel. While the billing address is the address registered with your credit card or bank details. When someone places an online order with credit card details, the store asks for billing details.
+            </div>
+            <p>
+              <a routerLink="/footer" class="text-white">Privay Policy</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold"  style="color:yellow">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color:red; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> Bhavani, Kpm 315A/170, Kalaimagal Street</p>
+            <p><i class="fas fa-envelope mr-3"></i>venkateshkumar1311@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> +91 XXXXX-XXX75</p>
+            <p><i class="fas fa-print mr-3"></i>+91  XXXXX-XXX75</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color:transparent;color:lavender"
+         >
+      © 2023 Copyright:
+      <a class="text-white" style="color:red" href="https://spirited.com/"
+         >Spirited.com</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+</div>
+<!-- End of .container -->

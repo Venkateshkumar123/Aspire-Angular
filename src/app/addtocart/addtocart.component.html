@@ -1,0 +1,79 @@
+<div class="heading">
+  <div class="title">
+    <h1>
+      <i class="fa-solid fa-cart-shopping" style="color: yellow;font-size: larger;"></i> Add To Cart
+    </h1>
+  </div>
+</div>
+
+
+<ng-container>
+
+  <div class="container">
+
+    <div class="card-table">
+
+      <div class="card-product">
+
+        <table class="table table-bordered" style="margin-left: 20%; margin-top: 2%;border-radius: 10px;">
+          <thead >
+            <tr>
+              <th>Sl.No</th>
+              <th>Game Name</th>
+              <th>Game Image</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Link</th>
+              <th>Total</th>
+              <th>Delete</th>
+
+            </tr>
+          </thead>
+
+          <tbody *ngFor="let item of products">
+            <tr>
+              <td>1</td>
+              <td style="color:red;font-weight: bold;">{{item.name}}</td>
+              <td >
+                <img  src= {{item.img}} alt="" width="200px" style="border-radius: 5px; margin-left:2%;" >
+              </td>
+              <td>{{item.price}}</td>
+              <td>{{item.quantity}}</td>
+              <td>{{item.link}}</td>
+              <td>{{item.total}}</td>
+              <td><button class="btn btn-danger" (click)="delete(item)" style="padding:5px 10px;">
+                <i class="fas fa-trash"></i>
+              </button></td>
+            </tr>
+            <tr>
+
+</tr>
+          </tbody>
+          <td colspan="4" style="border:none;"></td>
+          <td><button (click)="emptycart()" class="btn btn-danger" style="padding: 5px 20px;">Empty cart</button></td>
+          <td><button routerLink="/dashboard" class="btn btn-success" style="padding: 5px 20px;margin-left:50px;">Shop more</button></td>
+          <td><button  class="btn btn-warning"style="padding: 5px 20px;">Checkout</button></td>
+          <td><strong style="color:whitesmoke">Grand Total:</strong></td>
+        </table>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</ng-container>
+
+<!-- Empty Cart -->
+
+<ng-container *ngIf="products.length==0" >
+
+  <div class="center" style="border:2px solid lavender;padding: 30px; border-radius: 10px;">
+    <h4 style="color: whitesmoke;padding: 20px;background: yellow;color:blue;font-size:larger;font-weight: bolder; border-radius: 20px;">
+      Your Cart is Empty
+    </h4>
+    <h6 style="color: whitesmoke; margin-top: 4%;"> Add item to it</h6>
+    <button routerLink="/dashboard" class="btn btn-success" style="color: whitesmoke;padding: 4px 20px;margin-top: 4%;font-weight: bolder;">Shop Now</button>
+  </div>
+</ng-container>

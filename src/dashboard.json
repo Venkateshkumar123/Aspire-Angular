@@ -1,0 +1,31 @@
+{
+
+  "dashboardproduct": [
+  {
+    "name": "Crime Boss City",
+    "img": "../assets/images/cb.jpg",
+    "button": "Buy"
+  },
+  {
+    "name": "Tchiea",
+    "img": "../assets/images/tc.png",
+    "button": "Buy"
+  }],
+
+  "set2": [
+    {
+      "name": "gtav",
+      "img": "../assets/images/cb.jpg",
+      "button": "Buy"
+
+    },
+    {
+      "name": "Guardians of galaxy",
+      "img": "../assets/images/tc.png",
+      "button": "Buy"
+    }
+  ]
+
+
+
+}
